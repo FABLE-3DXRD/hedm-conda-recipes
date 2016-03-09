@@ -1,10 +1,11 @@
 package:
   name: iminuit
-  version: master
+  version: 1.2
 
 source:
-  git_url: https://github.com/iminuit/iminuit.git
-  patches:
+  fn: iminuit-1.2.tar.gz
+  url: https://pypi.python.org/packages/source/i/iminuit/iminuit-1.2.tar.gz#md5=4701ec472cae42015e26251703e6e984
+  md5: 4701ec472cae42015e26251703e6e984
 
 requirements:
   build:
