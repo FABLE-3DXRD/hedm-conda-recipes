@@ -1,0 +1,35 @@
+--- fsrc\fImageD11.f90	Wed Mar  9 13:42:29 2016
++++ fsrc\fImageD11.f90	Wed Mar  9 13:42:42 2016
+@@ -29,7 +29,6 @@
+ ! compute_gv for refinegrains.py
+
+ subroutine compute_gv( xlylzl, omega, omegasign, wvln, wedge, chi, t, gv, n )
+-  use omp_lib
+   implicit none
+   real, intent(in) :: xlylzl(3,n), omega(n), wvln, wedge, chi, t(3)
+   real(8), intent(inout):: gv(3,n)
+
+
+--- setup.py	Wed Mar  9 13:36:34 2016
++++ setup.py	Wed Mar  9 13:50:07 2016
+@@ -60,15 +60,16 @@
+                include_dirs = nid)
+
+ import sys
+-                  
++
+ # New fortran code - you might regret this...
+ fi = Extension("fImageD11",
+                sources = ['fsrc/fImageD11.f90' ],
+ #               extra_f90_compile_args=["-fopenmp -O2"],
+-               libraries = ['gomp','pthread'])
++#               libraries = ['gomp','pthread'])
++               )
+ # OK, I am beginning to regret it now. Patch for older numpys
+-sys.argv.extend ( ['config_fc', '--fcompiler=gnu95',
+-                   '--f90flags="-fopenmp -O2"'])
++#sys.argv.extend ( ['config_fc', '--fcompiler=gnu95',
++#                   '--f90flags="-fopenmp -O2"'])
+
+ if sys.platform == 'win32':
+     needed = [
