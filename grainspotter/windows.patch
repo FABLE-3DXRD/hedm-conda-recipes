@@ -31,3 +31,95 @@ Index: Makefile
  endif
 
  # Linux
+ $(INDEXOBJDIR)/%.o: ${INDEXDIR}/%.C
+Index: src/index/header/index.h
+===================================================================
+--- src/index/header/index.h	(revision 5508)
++++ src/index/header/index.h	(working copy)
+@@ -19,7 +19,11 @@
+ 
+ #define EXPONENT (FACTBASE)-(BOX_BASE)+1  // 65: 25, 129: 24, 257, 23
+ 
++int makeU(double *u1, double *u2, double *v1, double *v2, double *U);
+ 
++double my_atan(double s, double c);
++
++
+ enum ref_states { UNKNOWN, ASSIGNED, OUTLIER };
+ 
+ 
+@@ -291,14 +295,3 @@
+ 
+ 
+ #endif
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Index: src/index/index.c
+===================================================================
+--- src/index/index.c	(revision 5508)
++++ src/index/index.c	(working copy)
+@@ -6,7 +6,7 @@
+ #include "time.h"
+ #include "crystallography.h"
+ #include "index.h"
+-# include "utils.h"
++#include "utils.h"
+ 
+ /* 
+  *
+@@ -64,9 +64,7 @@
+ static int final_search(SAMPLE *sample, CRYST *cryst);
+ static int final_search_UB(SAMPLE *sample, CRYST *cryst);
+ 
+-inline double my_atan(double s, double c);
+ 
+-
+ int doindexing(SAMPLE *sample, CRYST *cryst){
+   int i,j,k;
+   //  int iU[9];
+@@ -600,7 +598,7 @@
+ }
+ 
+ 
+-inline int BusLev(double *u, double *v, double *mat) {
++static int BusLev(double *u, double *v, double *mat) {
+   double norm,invnorm;
+   
+   /* calculate matrix and make inversion */
+Index: src/index/pre_calculations.c
+===================================================================
+--- src/index/pre_calculations.c	(revision 5508)
++++ src/index/pre_calculations.c	(working copy)
+@@ -34,9 +34,7 @@
+ 
+ int makeU(double *u1, double *u2, double *v1, double *v2, double *U);
+ 
+-inline double my_atan(double s, double c);
+-
+-inline double my_atan(double s, double c) { /* omega in [-M_PI,M_PI] */
++double my_atan(double s, double c) { /* omega in [-M_PI,M_PI] */
+   double u=0;
+   
+   if (s>=0 && c>=0) u = atan(s/c);
+Index: src/index/pseudodata.c
+===================================================================
+--- src/index/pseudodata.c	(revision 5508)
++++ src/index/pseudodata.c	(working copy)
+@@ -17,7 +17,7 @@
+ 
+ static int generate_gvectors(SAMPLE *sample, CRYST *cryst, double *U, double *x);
+ 
+-inline double my_atan(double s, double c);
++double my_atan(double s, double c);
+ 
+ double myrand();
+ 

@@ -1,6 +1,6 @@
 package:
   name: grainspotter
-  version: trunk
+  version: "0.90"
 
 source:
   svn_url: http://svn.code.sf.net/p/fable/code/GrainSpotter/trunk
@@ -9,6 +9,10 @@ source:
     - Makefile.patch # [linux]
     - mavericks.patch # [osx]
     - windows.patch # [win]
+
+requirements:
+  build:
+    - mingw # [win]
 
 #test:
 #  commands:
