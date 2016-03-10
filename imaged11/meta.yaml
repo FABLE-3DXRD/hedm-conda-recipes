@@ -12,7 +12,6 @@ requirements:
     - numpy
   run:
     - fabio
-    - libpython # [win]
     - lxml
     - numpy
     - pillow >=2.5.3
