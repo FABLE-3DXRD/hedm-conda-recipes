@@ -4,13 +4,11 @@ package:
 
 source:
   svn_url: http://svn.code.sf.net/p/fable/code/ImageD11/trunk
-  patches:
-    - windows.patch # [win]
 
 requirements:
   build:
     - libpython # [win]
-    - mingw # [win]
+    - mingwpy # [win]
     - numpy
   run:
     - fabio
