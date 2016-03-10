@@ -8,7 +8,7 @@ requirements:
     - fabio
     - fitallb
     - grainspotter
-    - grainsweeper3d
+#    - grainsweeper3d
     - imaged11
     - scipy
     - sweep2png
