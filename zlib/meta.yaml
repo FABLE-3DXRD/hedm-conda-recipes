@@ -1,0 +1,11 @@
+package:
+  name: zlib
+  version: "1.2.8"
+
+source:
+  path: .
+
+about:
+  license: BSD
+  home: http://www.zlib.net
+  summary: A Massively Spiffy Yet Delicately Unobtrusive Compression Library

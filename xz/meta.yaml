@@ -1,0 +1,11 @@
+package:
+  name: xz
+  version: "5.2.1"
+
+source:
+  path: .
+
+about:
+  license: BSD
+  home: http://tukaani.org/xz/
+  summary: XZ Utils is free general-purpose data compression software with a high compression ratio

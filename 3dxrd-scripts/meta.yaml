@@ -8,16 +8,12 @@ requirements:
     - fabio
     - fitallb
     - grainspotter
-#    - grainsweeper3d
+    - grainsweeper3d
     - imaged11
     - scipy
     - sweep2png
     - tifffile
     - xfab
-
-#test:
-#  commands:
-#    - fumble
 
 about:
   license: GPL

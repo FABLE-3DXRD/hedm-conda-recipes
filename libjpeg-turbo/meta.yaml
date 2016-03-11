@@ -1,0 +1,24 @@
+package:
+  name: libjpeg-turbo
+  version: "1.4.0"
+
+source:
+  path: .
+
+#  patches:
+#    - Makefile.patch # [linux]
+#    - mavericks.patch # [osx]
+#    - windows.patch # [win]
+
+#requirements:
+#  build:
+#    - mingw # [win]
+
+#test:
+#  commands:
+#    - grainspotter
+
+about:
+  license: BSD
+  home: http://www.lfd.uci.edu/~gohlke/
+  summary: libjpeg-turbo

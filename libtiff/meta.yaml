@@ -1,0 +1,11 @@
+package:
+  name: libtiff
+  version: "4.0.3"
+
+source:
+  path: .
+
+about:
+  license: BSD
+  home: http://www.libtiff.org
+  summary: libtiff

@@ -1,0 +1,11 @@
+package:
+  name: jbigkit
+  version: "2.1"
+
+source:
+  path: .
+
+about:
+  license: BSD
+  home: https://www.cl.cam.ac.uk/~mgk25/jbigkit/
+  summary: JBIG-KIT is a software implementation of the JBIG1 data compression standard
