@@ -10,11 +10,20 @@ requirements:
   build:
     - python
   run:
+    - imaged11
+    - matplotlib
     - python
+    - scipy
 
 test:
   imports:
     - xfab
+  commands:
+    - findpeaks.py -h
+    - flt_remove_beam.py -h
+    - flt_split_phases.py -h
+    - makemap_all.py -h
+    - tweakdetpars.py -h
 
 about:
   license: GPL

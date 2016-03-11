@@ -11,6 +11,7 @@ source:
 requirements:
   build:
     - python
+    - tk
     - zlib
     - libpng
     - libtiff
@@ -19,6 +20,7 @@ requirements:
     - distribute
   run:
     - python
+    - tk
     - jpeg [unix]
     - zlib [unix]
     - freetype [unix]
