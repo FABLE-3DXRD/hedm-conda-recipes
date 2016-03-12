@@ -3,6 +3,8 @@ package:
   version: dev
 
 requirements:
+  build:
+    - python
   run:
     - fabian
     - fabio
@@ -10,6 +12,7 @@ requirements:
     - grainspotter
     - grainsweeper3d
     - imaged11
+    - python
     - scipy
     - sweep2png
     - tifffile

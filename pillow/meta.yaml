@@ -1,10 +1,10 @@
 package:
   name: pillow
-  version: master
+  version: "3.1.1"
 
 source:
   git_url: https://github.com/python-pillow/Pillow.git
-
+  git_rev: 3.1.1
   patches:
     - osx.patch # [osx]
 
