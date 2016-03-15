@@ -1,0 +1,11 @@
+package:
+  name: libpng-gcc
+  version: "1.6.17"
+
+source:
+  path: .
+
+about:
+  license: BSD
+  home: http://www.libpng.org
+  summary: libpng
