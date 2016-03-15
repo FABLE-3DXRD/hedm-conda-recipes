@@ -1,7 +1,3 @@
-mkdir -p $PREFIX/bin
-cp -r $RECIPE_DIR/filter_images.py $PREFIX/bin/
-cp -r $RECIPE_DIR/ge2tiff.py $PREFIX/bin/
-cp -r $RECIPE_DIR/stack_layers.py $PREFIX/bin/
+$PYTHON -c "import time; print time.strftime('0.1.0.dev.%Y.%m.%d')" > $SRC_DIR/__conda_version__.txt
 
-mkdir -p $PREFIX/share/3dxrd
-cp $RECIPE_DIR/*.ini $PREFIX/share/3dxrd/
+$PYTHON setup.py install

@@ -1,5 +1,5 @@
 package:
-  name: zlib
+  name: zlib-gcc
   version: "1.2.8"
 
 source:

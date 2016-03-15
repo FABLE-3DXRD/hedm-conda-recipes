@@ -1,5 +1,5 @@
 package:
-  name: xz
+  name: xz-gcc
   version: "5.2.1"
 
 source:

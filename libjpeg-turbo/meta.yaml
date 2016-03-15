@@ -1,5 +1,5 @@
 package:
-  name: libjpeg-turbo
+  name: libjpeg-turbo-gcc
   version: "1.4.0"
 
 source:

@@ -1,5 +1,5 @@
 package:
-  name: libtiff
+  name: libtiff-gcc
   version: "4.0.3"
 
 source:

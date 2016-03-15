@@ -1,3 +1,5 @@
+%PYTHON% -c "import time; print time.strftime('1.6.0.%%Y.%%m.%%d')" > %SRC_DIR%\__conda_version__.txt
+
 set LDFLAGS="-static-libgfortran -static-libgcc -static -lgomp -shared -fopenmp"
 %PYTHON% setup.py install
 
