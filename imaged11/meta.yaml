@@ -7,16 +7,19 @@ source:
 
 requirements:
   build:
+    - gcc # [unix]
     - libgcc # [osx]
     - libpython # [win]
     - mingwpy # [win]
     - numpy
+    - python
   run:
     - fabio
     - libgcc # [osx]
     - lxml
     - numpy
-    - pillow >=2.5.3
+    - pillow
+    - python
     - xfab
 
 test:
